@@ -1,5 +1,5 @@
 // Setup empty JS object to act as endpoint for all routes
-projectData = [];
+projectData = {};
 
 // Global vars
 let d = new Date();
@@ -44,6 +44,6 @@ app.get('/all', function(req,res){
 
 // POST route
 app.post('/add', (req, res)=>{
-    projectData.push(req.body);
+    projectData= req.body;
     console.log(projectData);
 });
