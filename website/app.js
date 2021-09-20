@@ -1,9 +1,9 @@
 // Personal API Key for OpenWeatherMap API
-const apiKey = "95361ca0d959cbf6fc3ab73a1fbb6921";
+const apiKey = "95361ca0d959cbf6fc3ab73a1fbb6921&units=metric";
 
 // Date
 let d = new Date();
-let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
+let newDate = d.getMonth()+1+'.'+ d.getDate()+'.'+ d.getFullYear();
 
 // Eventlistener to generate the result upon click on button
 let generate = document.getElementById('generate');
@@ -23,12 +23,17 @@ async function webData (zip){
 };
 
 // function to display the data in our page
-function display(data){
-  document.getElementById("date").textContent="Date: "+newDate;
-  document.getElementById("name").textContent="Zip Code: "+zip.value;
-  document.getElementById("temp").textContent="Temp: "+data.main.temp;
-  document.getElementById("response").textContent="Feeling: "+feelings.value;
-};
+const display= async()=>{
+  const response = await fetch("/all")
+    try{
+    const allData = await response.json();
+    document.getElementById("date").textContent="Date: "+allData.date;
+    document.getElementById("temp").textContent="Temp: "+allData.temp+" \u00B0C";
+    document.getElementById("response").textContent="Feeling: "+allData.content;
+    } catch(error) {
+      console.log("error", error);
+    }
+  };
 
 
 /* Function to POST data */
