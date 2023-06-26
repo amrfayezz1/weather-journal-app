@@ -5,29 +5,31 @@
     <title>Weather Journal</title>
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/icons/favicon.ico" type="image/x-icon">
   </head>
   <body>
     <div id = "app">
       <div class ="holder headline">
         <h1>Weather Journal App</h1>
       </div>
-      <div class ="holder zip">
-        <label for="zip">Enter your zip code</label>
-        <input type="text" id="zip" placeholder="Enter zip code here" required>
+      <div class ="holder city">
+        <label for="city">Enter your City name</label>
+        <input type="text" id="city" placeholder="Enter City name here" required autocomplete="off">
       </div>
       <div class ="holder feel">
         <label for="feelings">How are you feeling today?</label>
-        <textarea class= "myInput" id="feelings" placeholder="Enter your feelings here" rows="3" cols="40"></textarea>
+        <textarea class= "myInput" id="feelings" placeholder="Enter your feelings here" rows="3" cols="40" autocomplete="off"></textarea>
       </div>
       <div class="holder">
         <button id="generate" type = "submit"> Generate </button>
       </div>
       <div class ="holder entry">
-        <div class = "title">Most Recent Entry</div>
+        <div class = "title"><b>Most Recent Entry</b></div>
         <div id = "entryHolder">
           <div id = "name"></div> 
           <div id = "date"></div> 
           <div id = "temp"></div>
+          <div id = "feel"></div>
           <div id = "response"></div>
         </div>
       </div>
