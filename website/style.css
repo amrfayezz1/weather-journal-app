@@ -1,17 +1,17 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
 
-html{
+html {
     background: #ddd;
 }
 
-body{
+body {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-#app{
+#app {
     height: 100vh;
     color: #3f39a0;
     text-align: center;
@@ -20,7 +20,7 @@ body{
     font-family: 'Oswald', sans-serif;
 }
 
-.entry{
+.entry {
     background: rgba(59, 74, 107, .4);
 }
 
@@ -29,22 +29,24 @@ body{
     border-bottom-left-radius: 35px;
     border-bottom-right-radius: 35px;
 }
-.title{
+
+.title {
     margin-top: 30px;
 }
 
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
-label{
-    display:block;
+label {
+    display: block;
     font-size: 27px;
     margin-top: 15px;
 }
 
-input, textarea{
+input,
+textarea {
     height: 30px;
     width: 280px;
-    background:#22b2da;
+    background: #22b2da;
     color: #3f39a0;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
@@ -54,7 +56,7 @@ input, textarea{
     border-radius: 10px;
 }
 
-button{
+button {
     border-radius: 10px;
     width: 150px;
     height: 50px;
@@ -66,7 +68,8 @@ button{
     box-shadow: 2px 4px 5px #444;
     cursor: pointer;
 }
-h1{
+
+h1 {
     font-size: 36px;
 }
 
@@ -79,6 +82,6 @@ button:focus {
 }
 
 ::placeholder {
-    color: #3e39a0b7; 
+    color: #3e39a0b7;
     font-family: 'Oswald', sans-serif;
 }
